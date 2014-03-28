@@ -14,16 +14,15 @@ reserved = {
    	'OUTPUT': 'OUTPUT',
    	'PWM': 'PWM',
 	'void':'VOID',
-    'bool':'BOOL',
+	'bool':'BOOL',
 	'int':'INT',
 	'float':'FLOAT',
-	'char':'CHAR',
 	'string':'STRING',
 	'image':'IMAGE',
 	'if':'IF',
-    'else':'ELSE',
-    'while':'WHILE',
-    'do':'DO',
+	'else':'ELSE',
+	'while':'WHILE',
+	'do':'DO',
 	'true':'C_BOOL',
 	'false':'C_BOOL',
 	'main' : 'MAIN',
@@ -32,12 +31,10 @@ reserved = {
 }
 # List of token names.
 tokens = [
-    'ID',
+	'ID',
 	#Constants
-	#'C_BOOL',
-    'C_INT',
-    'C_FLOAT',
-	'C_CHAR',
+	'C_INT',
+	'C_FLOAT',
 	'C_STRING',
 	# Operators + - / * % > < <= >= != == && || ! 
 	'PLUS',
@@ -64,13 +61,13 @@ tokens = [
 	'COLON',  
 	'TAB',
 	'NEWLINE',
+	# Ignored symbols
+	'COMMENT',
 ] + list(reserved.values())
 
 #Check these tokens first
-t_ignore_COMMENT = r'\#.*'
-t_LPAREN        = r'\('
-t_RPAREN        = r'\)'
-
+t_LPAREN       	 = r'\('
+t_RPAREN       	 = r'\)'
 
 def t_ID(t):
     r'[a-zA-Z][a-zA-Z0-9_]*'
@@ -87,16 +84,14 @@ def t_C_INT(t):
     t.value = int(t.value)
     return t
 
-#t_C_BOOL = r'true | false'
-t_C_CHAR = r'\'[^\']\''
 t_C_STRING = r'\"[^\"]*\"'
 
 # Operators
-t_PLUS      	= r'\+'
-t_MINUS         = r'-'
-t_DIVIDE        = r'/'
-t_MOD			= r'%'
-t_TIMES         = r'\*'
+t_PLUS      			= r'\+'
+t_MINUS         		= r'-'
+t_DIVIDE        		= r'/'
+t_MOD					= r'%'
+t_TIMES         		= r'\*'
 t_GREATER_THAN          = r'>'
 t_LESS_THAN				= r'<'
 t_LESS_EQUAL_THAN		= r'<='
@@ -129,14 +124,15 @@ def t_NEWLINE(t):
 
 # A string containing ignored characters (spaces)
 t_ignore  = ' '
+t_ignore_COMMENT = r'\#.*'
 
 # Error handling rule
 def t_error(t):
     print "Illegal character '%s' in line '%s'" % (t.value[0],t.lexer.lineno)
     t.lexer.skip(1)
-
+    
 # Build the lexer
-lexer = lex.lex(debug=0)
+lexer = lex.lex()
 
 
 ### Test the parser####
