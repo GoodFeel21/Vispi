@@ -3,4 +3,11 @@
 1. Validar no exceder los segmentos de memoria virtual al crear nuevas variables
 2. Terminar los cuadruplos
 
+<<<<<<< HEAD
+=======
+Que pasa cuando haces esto?
+tempImg = takePicture()
+Todo en una funcion en la que solo mandes los operandos a verificar y que esten en una lista? OPTIMIZAR GENERACION DE CUADRUPLO
+CHECAR TIPOS EN IGUAL
+>>>>>>> 46857bb09e088f15e85e757d44fb99c18778dcef
 x. test test test

@@ -1,19 +1,29 @@
+<<<<<<< HEAD
 
 PROGRAM debugTabsEol
 
 #Hola
 CAM webcam:micamara 
 int a, b, velocidad
+=======
+PROGRAM debugTabsEol
+
+int a, velocidad
+>>>>>>> 46857bb09e088f15e85e757d44fb99c18778dcef
 bool led1, led2
 
 def void main ():
 	while (1): 
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 46857bb09e088f15e85e757d44fb99c18778dcef
 		if(a == 1):
 			led2 = true
 			velocidad = 25 
 		else:
 			b = 0    
+<<<<<<< HEAD
   		
   		if(b > 3):
   			print("Hola")
@@ -25,3 +35,9 @@ def void main ():
 	led1 = false 
   	velocidad = 75
 
+=======
+  		if(b > 3):
+  			print("Hola")
+		led1 = false 
+  		velocidad = 75
+>>>>>>> 46857bb09e088f15e85e757d44fb99c18778dcef
