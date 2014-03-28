@@ -9,8 +9,8 @@ tokens = vispi_lex.tokens
 #       NULL operand is only valid on the first operand
 #       -1 is only valid as a result
 #   operator order: + - / * % > < <= >= != == && || ! 
-semIndex1={'<NULL>':0, 'bool':1, 'char':2, 'int':3, 'float':4, 'string':5, 'image':6}
-semIndex2={'bool':0, 'char':1, 'int':2, 'float':3, 'string':4, 'image':5}
+semIndex1={'<NULL>':0, 'bool':1, 'int':2, 'float':3, 'string':4, 'image':5}
+semIndex2={'bool':0, 'int':1, 'float':2, 'string':3, 'image':4}
 semIndex3={'+':0,'-':1,'/':2,'*':3,'%':4,'>':5,'<':6, '<=':7, '>=':8, '!=':9, '==':10, '&&':11, '||':12, '!':13}
 SemCube = [
         [
